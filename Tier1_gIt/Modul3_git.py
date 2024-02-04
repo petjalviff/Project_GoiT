@@ -151,3 +151,49 @@
 # discount_price(100, 0.1)
 # discount_price(1000, 0.9) 
 
+
+# *********************<<<<<<< Homework 5 >>>>>>>>>>****************
+# def get_fullname (first_name,last_name, middle_name=""):
+#     if middle_name=="":
+#         print(first_name, last_name)
+#         return f"{first_name} {last_name}"
+#     else:
+#         print(first_name, middle_name, last_name)
+#         return f"{first_name}  {middle_name} {last_name}"
+        
+# get_fullname("Andrii", "Petryshyn")
+# get_fullname("Igor", "Petryshyn", "Andriyovich")
+
+
+# *********************<<<<<<< Homework 6 >>>>>>>>>>****************
+# def total(a=6, *pbook, **car):
+#     a=1
+#     print("a =",a)
+#     # прохід по всіх елементах кортежу
+#     for sitem in pbook:
+#         print('single_item', sitem)
+
+#     #прохід по всіх елементах словника
+#     for f_part, s_part in car.items():
+#         print(f_part,":",s_part)
+
+# print(total(5, 1, {6}, "a", 5, 2, 3, {"Jack":55555555}, John="2231", Inge=1560, Andrii=1))    
+
+
+
+# def first(size, *name):
+#     print(size, name)
+#     size=size + len(name)
+#     print(size)
+#     return size
+
+# def second(size, **comments):
+#     print(size, comments)
+#     size=size + len(comments)
+#     print(size)
+#     return size
+
+# first(5, "first", "second", "third")
+# first(1, "Alex", "Boris")
+# second(3, comment_one="first", comment_two="second", comment_third="third")
+# second(10, comment_one="Alex", comment_two="Boris")
