@@ -124,3 +124,30 @@
 
 
 # *********************<<<<<<< Homework 4 >>>>>>>>>>****************
+# def func_outer(price,bbb):
+#     # x = 5
+#     def func_inner():
+#         # print("prise test=", price)
+#         nonlocal price
+#         price = price*bbb
+#         print(price)
+#     func_inner()
+#     return price
+
+# # result = func_outer(10)  # 5
+# func_outer(2000, 0.5)
+
+
+# def discount_price(price, discount):
+#     print("Old price - ", price)
+#     print("discount -", discount)
+#     def apply_discount():
+#         nonlocal price
+#         price = price*(1-discount)
+#         print("price with discount - ", price)
+#     apply_discount()
+#     return price
+
+# discount_price(100, 0.1)
+# discount_price(1000, 0.9) 
+
