@@ -107,4 +107,20 @@
 
 
 # *********************<<<<<<< Homework 3 >>>>>>>>>>****************
+# base_rate = 40
+# price_per_km = 10
+# total_trip=0
 
+# def calculate_trip_price(distance_km):
+#     total_price=base_rate+price_per_km*distance_km
+#     print(total_price)
+#     global total_trip
+#     total_trip=total_trip+1
+#     return total_price
+
+# calculate_trip_price(20)
+# calculate_trip_price(4.3)
+# print(total_trip)
+
+
+# *********************<<<<<<< Homework 4 >>>>>>>>>>****************
