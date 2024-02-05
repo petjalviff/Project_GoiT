@@ -165,7 +165,7 @@
 # get_fullname("Igor", "Petryshyn", "Andriyovich")
 
 
-# *********************<<<<<<< Homework 6 >>>>>>>>>>****************
+# *********************<<<<<<< Homework 7 >>>>>>>>>>****************
 # def total(a=6, *pbook, **car):
 #     a=1
 #     print("a =",a)
@@ -197,3 +197,38 @@
 # first(1, "Alex", "Boris")
 # second(3, comment_one="first", comment_two="second", comment_third="third")
 # second(10, comment_one="Alex", comment_two="Boris")
+
+
+# *********************<<<<<<< Homework 7 >>>>>>>>>>****************
+# def cost_delivery(quantity, *numbers, discount=0):
+#     if discount>0:
+#         total_cost=(5+2*(quantity-1))*(1-discount)
+#         print(total_cost)
+#     elif discount==None:
+#         total_cost=(5+2*(quantity-1))
+#         print(total_cost)
+#     else: total_cost=(5+2*(quantity-1))
+#     print(total_cost)
+#     return total_cost
+
+# cost_delivery(2, 1, 2, 3)
+# cost_delivery(3, 3)
+# cost_delivery(1)
+# cost_delivery(2, 1, 2, 3, discount=0.5)
+
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# def fun(a, b=2, c=3):
+#     """Знаходить суму трьох параметрів.
+
+#      Перший параметр обов'язковий, два інших за замовчанням дорівнюють 2 і 3"""
+#     return a + b * c
+
+# print(fun.__doc__)
+
+# def cost_delivery(quantity, *_, discount=0):
+#     """Функція повертає суму за доставлення замовлення.
+#     Перший параметр &mdash; кількість товарів в замовленні.
+#     Параметр знижки discount, який передається лише як ключовий, за замовчуванням має значення 0."""
+#     result = (5 + 2 * (quantity - 1)) * (1 - discount)
+#     return result
