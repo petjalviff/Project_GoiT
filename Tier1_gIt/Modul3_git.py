@@ -280,3 +280,13 @@
 #     return int(factorial(a)/(factorial(b)*factorial(d)))
 #     # print("c=",e)
 # print(number_of_groups(50,7))
+
+
+# Заняття онлайн
+# def show_even_square(start,end, step=1):
+#     for a in range(start, end+1,step):
+#         if a%2==0:
+#             print(a," : ", a**2)
+
+# show_even_square(0,20,3)
+# show_even_square(1,45,3)
