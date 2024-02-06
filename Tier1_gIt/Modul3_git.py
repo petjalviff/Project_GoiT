@@ -232,3 +232,51 @@
 #     Параметр знижки discount, який передається лише як ключовий, за замовчуванням має значення 0."""
 #     result = (5 + 2 * (quantity - 1)) * (1 - discount)
 #     return result
+
+
+# *********************<<<<<<< Homework 9 >>>>>>>>>>****************
+# Обчислюємо факторіал числа n за допомогою рекурсії
+# @param n – число, для якого треба розрахувати факторіал
+# @return - факторіал числа n
+# def factorial(n):
+#     fac=0
+#     if fac <= 2:
+#         return fac  # Базовий випадок
+#     else:
+#         return n * factorial(n + 1)  # Рекурсивний випадок
+
+
+# num = int(input("Введіть додатне ціле число: "))
+# result = factorial(num)
+# print(f"Факторіал числа {num} дорівнює {result}")
+
+
+# # Мій варіант вичислення факторіалу
+# def my_factorial(n):
+#     f=1 # тут можна й нуль поставити, на результат не вплине, лише зайвий раз прожене цикл
+#     total_fac=1
+#     while f<(n):
+#         total_fac=total_fac*(f+1)
+#         f=f+1
+#     print("factorial int n -",total_fac)
+
+# n=int(input("Введіть ціле додатнє число:"))
+# result2 = my_factorial(n)
+# print(result)
+
+# def factorial(n):
+#     f=1 # тут можна й нуль поставити, на результат не вплине, лише зайвий раз прожене цикл
+#     total_fac=1
+#     while f<(n):
+#         total_fac=total_fac*(f+1)
+#         f=f+1
+#     print("factorial int n -",total_fac)
+#     return total_fac
+
+# def number_of_groups(n, k):
+#     a=n
+#     b=n-k
+#     d=k
+#     return int(factorial(a)/(factorial(b)*factorial(d)))
+#     # print("c=",e)
+# print(number_of_groups(50,7))
