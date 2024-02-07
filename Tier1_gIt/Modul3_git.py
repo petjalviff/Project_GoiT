@@ -290,3 +290,10 @@
 
 # show_even_square(0,20,3)
 # show_even_square(1,45,3)
+# def add(a,b,*arg):
+#     print(arg)
+#     print(b)
+#     print(a)
+#     c=a+b
+#     print("c= ",c)
+# add(1,3,5,6,7,8,10)
