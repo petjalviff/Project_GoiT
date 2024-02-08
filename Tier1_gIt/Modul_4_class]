@@ -4,8 +4,28 @@
 # print(a)
 
 
-some_iterable = ["a", "b", "c"]
-first_letter = some_iterable[0]
-middle_one = some_iterable[1]
-last_letter = some_iterable[2]
-print(some_iterable)
+# some_iterable = ["a", "b", "c"]
+# first_letter = some_iterable[0]
+# middle_one = some_iterable[1]
+# last_letter = some_iterable[2]
+# print(some_iterable)
+
+
+numbers = ['a', 'b']
+print(numbers)
+numbers.append('c')
+print(numbers)  # ['a', 'b', 'c']
+char=["d","h"]
+numbers.extend(char)
+print(numbers)
+numbers.insert(1,"z")
+print(numbers)
+numbers.remove("c")
+print(numbers)
+numbers.extend(char*2)
+print(numbers)
+h_ind=numbers.index("h")
+print(h_ind)
+ch=input("Input character >>>")
+count=numbers.count(ch)
+print(ch,"have",count)
