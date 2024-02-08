@@ -1,0 +1,10 @@
+# fruit_list=["apple","mango"]
+# fruit_list
+# a=fruit_list
+# print(a)
+
+
+some_iterable = ["a", "b", "c"]
+first_letter = some_iterable[0]
+middle_one = some_iterable[1]
+last_letter = some_iterable[2]
