@@ -28,9 +28,13 @@ h_ind=numbers.index("h")
 print(h_ind)
 ch=input("Input character >>>")
 count=numbers.count(ch)
-index_ch=numbers.index(ch)
-print(ch,"have",count)
-print(index_ch)
+print(ch,"have index",count)
+try:
+    index_ch=numbers.index(ch)
+except ValueError:
+    print(ch, " - is not in list")
+else:
+    print(index_ch)
 numbers.sort()
 print(numbers)
 print("list numbers have ", len(numbers), "arguments")
