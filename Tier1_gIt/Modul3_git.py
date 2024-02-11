@@ -297,3 +297,100 @@
 #     c=a+b
 #     print("c= ",c)
 # add(1,3,5,6,7,8,10)
+
+
+
+
+# *********************<<<<<<< Homework 10 >>>>>>>>>>****************
+# def factorial(n):
+#     if n <= 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)
+
+# def fibonachi(n):
+#     if n<=1:
+#         return 1
+#     else:
+#         return n
+
+
+
+
+
+# factorial(5)    # 120
+# print(factorial(5))
+# n=int(input("Input integer >>>"))
+# print(factorial(n))
+
+
+
+
+# def fibonacci(n, memo={}):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     elif n in memo:
+#         return memo[n]
+#     else:
+#         result = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+#         memo[n] = result
+#         return result
+#         print(result)
+
+# fibonacci(5)
+
+
+# def factorial(n):
+#     f=1 # тут можна й нуль поставити, на результат не вплине, лише зайвий раз прожене цикл
+#     total_fac=1
+#     while f<(n):
+#         total_fac=total_fac*(f+1)
+#         f=f+1
+#     print("factorial int n -",total_fac)
+#     return total_fac
+
+# def number_of_groups(n, k):
+#     a=n
+#     b=n-k
+#     d=k
+#     return int(factorial(a)/(factorial(b)*factorial(d)))
+#     # print("c=",e)
+# print(number_of_groups(50,7))
+
+
+
+# def fibonachi(n)
+#     f=0
+#     total_fib=0
+#     while f<n:
+#         f
+#         total_fib=total_fib+f
+
+
+def GetFibonacciList(n, L):
+    # Перевірити, чи довжина списку коректна
+    count = len(L)
+    print("count= ", count)
+
+    # if len(L)<2:
+    #     return []
+
+    # Отримати останні числа у списку L
+    num1 = L[count-2]
+    num2 = L[count-1]
+    print(num1)
+    print(num2)
+
+
+    # Формула розрахунку наступного числа
+    if (num1+num2) < n:
+        L = L + [num1+num2]
+        return GetFibonacciList(n, L) # викликати рекурсивно функцію
+    else:
+        return L # якщо досягнуто кінець, то звичайний вихід
+
+# Викликати функцію GetFibonacciList()
+LL = GetFibonacciList(2, [0, 1])
+print("LL = ", LL)
