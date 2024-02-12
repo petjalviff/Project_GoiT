@@ -99,23 +99,51 @@
 
 # *********************<<<<<<< Homework 3 >>>>>>>>>>****************
 def get_grade(key):
-    return get_grade
-
-
-
-# my_dict_one = {
-#     1: '1',
-#     2: '2',
-#     3: '3'
-# }
-
-
+    for a in my_dict_one:
+        if a==key:
+            print(my_dict_one[a])
+            return my_dict_one[a]
+    
+def get_description(key):
+    for b in dict_zalik:
+        if b==key:
+            print(dict_zalik[b])
+            return dict_zalik[b]
 
 my_dict_one = {
-    1: "F",
-    2: "FX",
+    "F":1,
+    "FX":2,
+    "E":3,
+    "D":3,
+    "C":4,
+    "B":5,
+    "A":5
     }
+dict_zalik= {
+    "F": "Unsatisfactorily",
+    "FX": "Unsatisfactorily",
+    "E": "Enough",
+    "D": "Satisfactorily",
+    "C": "Good",
+    "B": "Very good",
+    "A": "Perfectly"
+    }
+
 print(my_dict_one)
+key="C"
+get_grade(key)
+get_description(key)
+
+
+
+# for a in my_dict_one:
+#     if a == key:
+#         print(my_dict_one[a])
+
+# get_grade(3)
+# print(my_dict_one.keys[0])
+
+
 
 # lang = {"Python": 1991, "Java": 1995, "JS": 1995, 7: 8}
 # lang.update({5:6})
