@@ -52,5 +52,3 @@ for i in numbers:
     test_char.append(i*2)
     test.len(test_char)
     print(test_char, test)
-
-
