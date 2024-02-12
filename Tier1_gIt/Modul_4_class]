@@ -1,54 +1,102 @@
 # fruit_list=["apple","mango"]
 # fruit_list
 # a=fruit_list
-# print(a)
+# # print(a)
 
 
-# some_iterable = ["a", "b", "c"]
-# first_letter = some_iterable[0]
-# middle_one = some_iterable[1]
-# last_letter = some_iterable[2]
-# print(some_iterable)
+# # some_iterable = ["a", "b", "c"]
+# # first_letter = some_iterable[0]
+# # middle_one = some_iterable[1]
+# # last_letter = some_iterable[2]
+# # print(some_iterable)
 
 
-numbers = ['a', 'b']
-print(numbers)
-numbers.append('c')
-print(numbers)  # ['a', 'b', 'c']
-char=["d","h"]
-# numbers.extend(char)
+# numbers = ['a', 'b']
 # print(numbers)
-# numbers.insert(1,"z")
+# numbers.append('c')
+# print(numbers)  # ['a', 'b', 'c']
+# char=["d","h"]
+# # numbers.extend(char)
+# # print(numbers)
+# # numbers.insert(1,"z")
+# # print(numbers)
+# # numbers.remove("c")
+# # print(numbers)
+# numbers.extend(char*2)
 # print(numbers)
-# numbers.remove("c")
+# # h_ind=numbers.index("h")
+# # print(h_ind)
+# # ch=input("Input character >>>")
+# # count=numbers.count(ch)
+# # print(ch,"have index",count)
+# # try:
+# #     index_ch=numbers.index(ch)
+# # except ValueError:
+# #     print(ch, " - is not in list")
+# # else:
+# #     print(index_ch)
+# # numbers.sort()
+# # print(numbers)
+# # print("list numbers have ", len(numbers), "arguments")
+# # numbers.append("f")
+# # print(numbers)
+# # numbers.sort()
+# # print("sort2 - ",numbers)
+# # numbers.reverse()
+# # print("revers - ",numbers)
+# numbers.extend("v")
 # print(numbers)
-numbers.extend(char*2)
-print(numbers)
-# h_ind=numbers.index("h")
-# print(h_ind)
-# ch=input("Input character >>>")
-# count=numbers.count(ch)
-# print(ch,"have index",count)
-# try:
-#     index_ch=numbers.index(ch)
-# except ValueError:
-#     print(ch, " - is not in list")
-# else:
-#     print(index_ch)
-# numbers.sort()
-# print(numbers)
-# print("list numbers have ", len(numbers), "arguments")
-# numbers.append("f")
-# print(numbers)
-# numbers.sort()
-# print("sort2 - ",numbers)
-# numbers.reverse()
-# print("revers - ",numbers)
-numbers.extend("v")
-print(numbers)
-test_char=[]
-for i in numbers:
-    print(i)
-    test_char.append(i*2)
-    test.len(test_char)
-    print(test_char, test)
+# test_char=[]
+# for i in numbers:
+#     print(i)
+#     test_char.append(i*2)
+#     test.len(test_char)
+#     print(test_char, test)
+
+
+
+
+# *********************<<<<<<< Homework 1 >>>>>>>>>>****************
+
+# def amount_payment(payment):
+#     sum = 0
+#     for element in payment:
+#         if element > 0:
+#             sum += element
+#     return sum
+# # print(sum)
+# # print(sum)
+# print(amount_payment([12,-3,12,10,10,-56,5]))
+
+
+
+# *********************<<<<<<< Homework 2 >>>>>>>>>>****************
+# data=[1, -3, 4, 100, 0, -5, 10, 1, 1]
+
+# def prepare_data(data):
+#     a=max(data)
+#     b=min(data)
+#     data.remove(a)
+#     data.remove(b)
+#     data.sort()
+#     print(data)
+#     return data
+
+# prepare_data([1, -3, 4, 100, 0, -5, 10, 1, 1])
+# print(data)
+# # data.sort()
+# print(data)
+# data.pop(0)
+# print(data)
+# a=len(data)
+# print("a=", a)
+# b=max(data)
+# print("b=", b)
+# data.remove(b)
+# print(data)
+
+
+
+# *********************<<<<<<< Homework 3 >>>>>>>>>>****************
+
+
