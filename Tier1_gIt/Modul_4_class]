@@ -98,41 +98,41 @@
 
 
 # *********************<<<<<<< Homework 3 >>>>>>>>>>****************
-def get_grade(key):
-    for a in my_dict_one:
-        if a==key:
-            print(my_dict_one[a])
-            return my_dict_one[a]
+# def get_grade(key):
+#     for a in my_dict_one:
+#         if a==key:
+#             print(my_dict_one[a])
+#             return my_dict_one[a]
     
-def get_description(key):
-    for b in dict_zalik:
-        if b==key:
-            print(dict_zalik[b])
-            return dict_zalik[b]
+# def get_description(key):
+#     for b in dict_zalik:
+#         if b==key:
+#             print(dict_zalik[b])
+#             return dict_zalik[b]
 
-my_dict_one = {
-    "F":1,
-    "FX":2,
-    "E":3,
-    "D":3,
-    "C":4,
-    "B":5,
-    "A":5
-    }
-dict_zalik= {
-    "F": "Unsatisfactorily",
-    "FX": "Unsatisfactorily",
-    "E": "Enough",
-    "D": "Satisfactorily",
-    "C": "Good",
-    "B": "Very good",
-    "A": "Perfectly"
-    }
+# my_dict_one = {
+#     "F":1,
+#     "FX":2,
+#     "E":3,
+#     "D":3,
+#     "C":4,
+#     "B":5,
+#     "A":5
+#     }
+# dict_zalik= {
+#     "F": "Unsatisfactorily",
+#     "FX": "Unsatisfactorily",
+#     "E": "Enough",
+#     "D": "Satisfactorily",
+#     "C": "Good",
+#     "B": "Very good",
+#     "A": "Perfectly"
+#     }
 
-print(my_dict_one)
-key="C"
-get_grade(key)
-get_description(key)
+# print(my_dict_one)
+# key="C"
+# get_grade(key)
+# get_description(key)
 
 
 
@@ -148,3 +148,35 @@ get_description(key)
 # lang = {"Python": 1991, "Java": 1995, "JS": 1995, 7: 8}
 # lang.update({5:6})
 # print(lang)
+
+
+# *********************<<<<<<< Homework 5 >>>>>>>>>>****************
+# def split_list(grade):
+#     try:
+#          avg = sum(grade) / len(grade)
+#     except TypeError:
+#         print("avg=0")
+#         list1 = [] #low grade
+#         list2 = [] #high grade
+#     except ZeroDivisionError:
+#         print("avg=0")
+#         list1 = [] #low grade
+#         list2 = [] #high grade
+#     else:
+#         print("avg",avg)
+#         list1 = [] #low grade
+#         list2 = [] #high grade
+    
+#         for a in grade:
+#                 if a <= avg:
+#                     list1.append(a)
+#                 else:
+#                     list2.append(a)
+
+#     grade_tuple = (list1, list2)
+#     return grade_tuple
+# # grade=1,23,4,56,7,89,10
+# grade=0
+# print(split_list(grade))
+# grade=1,2,8,9
+# print(split_list(grade))
