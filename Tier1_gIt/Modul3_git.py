@@ -369,28 +369,58 @@
 #         total_fib=total_fib+f
 
 
-def GetFibonacciList(n, L):
-    # Перевірити, чи довжина списку коректна
-    count = len(L)
-    print("count= ", count)
+# def GetFibonacciList(n, L):
+#     # Перевірити, чи довжина списку коректна
+#     count = len(L)
+#     print("count= ", count)
 
-    # if len(L)<2:
-    #     return []
+#     # if len(L)<2:
+#     #     return []
 
-    # Отримати останні числа у списку L
-    num1 = L[count-2]
-    num2 = L[count-1]
-    print(num1)
-    print(num2)
+#     # Отримати останні числа у списку L
+#     num1 = L[count-2]
+#     num2 = L[count-1]
+#     print(num1)
+#     print(num2)
 
 
-    # Формула розрахунку наступного числа
-    if (num1+num2) < n:
-        L = L + [num1+num2]
-        return GetFibonacciList(n, L) # викликати рекурсивно функцію
-    else:
-        return L # якщо досягнуто кінець, то звичайний вихід
+#     # Формула розрахунку наступного числа
+#     if (num1+num2) < n:
+#         L = L + [num1+num2]
+#         return GetFibonacciList(n, L) # викликати рекурсивно функцію
+#     else:
+#         return L # якщо досягнуто кінець, то звичайний вихід
 
-# Викликати функцію GetFibonacciList()
-LL = GetFibonacciList(2, [0, 1])
-print("LL = ", LL)
+# # Викликати функцію GetFibonacciList()
+# LL = GetFibonacciList(2, [0, 1])
+# print("LL = ", LL)
+
+
+# 0, 1, 1, 2, 3, 5, 8
+# F0 = 0
+# F1 = 1
+# Fn = Fn-1 + Fn-2
+
+# ***** Робоча функція
+# def fibonacci(n, level=0):
+#     if n in (0, 1):
+#         # print(f'Level: {level} - fibonacci({n}) = {n}')
+#         return n
+#     # print(f'Level: {level} - fibonacci({n}) = fibonacci({n} - 1) + fibonacci({n} - 2)')
+#     result = fibonacci(n - 1, level=level+1) + fibonacci(n - 2, level=level+1)
+#     print(f'Level: {level} - fibonacci({n}) = {result}')
+#     return result
+
+# # fibonacci(5)
+# print(fibonacci(8))
+
+
+
+# [[], [[], []]]
+
+# fibonacci(5) -> fibonacci(5 - 1) + fibonacci(5 - 2) -> fibonacci(4) + fibonacci(3) -> 3 + 2 -> 5
+# fibonacci(4) -> fibonacci(4 - 1) + fibonacci(4 - 2) -> fibonacci(3) + fibonacci(2) -> 2 + 1 -> 3
+# fibonacci(3) -> fibonacci(3 - 1) + fibonacci(3 - 2) -> fibonacci(2) + fibonacci(1) -> 1 + 1 -> 2
+# fibonacci(2) -> fibonacci(2 - 1) + fibonacci(2 - 2) -> fibonacci(1) + fibonacci(0) -> 1
+
+# fibonacci(1) + fibonacci(0) -> 1
