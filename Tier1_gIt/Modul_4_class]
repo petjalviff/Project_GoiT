@@ -1,12 +1,12 @@
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # # fruit_list=["apple","mango"]
 # # fruit_list
 # # a=fruit_list
-=======
+# =======
 # fruit_list=["apple","mango"]
 # fruit_list
 # a=fruit_list
->>>>>>> 1ef12916a0b28aaee42a04162615a48d9aa37474
+# >>>>>>> 1ef12916a0b28aaee42a04162615a48d9aa37474
 # # print(a)
 
 
@@ -50,7 +50,7 @@
 # # print("sort2 - ",numbers)
 # # numbers.reverse()
 # # print("revers - ",numbers)
-<<<<<<< HEAD
+# <<<<<<< HEAD
 # # numbers.extend("v")
 # # print(numbers)
 # # test_char=[]
@@ -60,8 +60,52 @@
 # #     test.len(test_char)
 # #     print(test_char, test)
 
+# s = "Hello"
+# s.upper()
+# print(s)    # Виведе 'HELLO'
+
+
+
+# s = "Hello world!"
+# s.upper()
+# print(s[0])   # H
+# print(s[-2])  # !
+# print(f"{s[0]+ s[3]:<10} | {s[-5]:<10} |")
+
+
+# passw = input("Input your new password: ")
+# if "qwerty" in passw or "123" in passw:
+#     print("This password is too weak!")
+# else:
+#     print("Your password is correct")
+
+# # passw=int(passw)
+# prime_numbers = {111, 3, 5, 7, 11, 13, 17, 19, 23}
+# is_prime = passw in prime_numbers
+# print(is_prime)
+# for a in prime_numbers:
+#     print(a)
+# d=len(passw)
+# b=0
+# while b<d:
+#     c=passw[b]
+#     print(c)
+#     b=b+1
+
+# from pathlib import Path
+
+# p = Path('/home/user/Downloads')    # p Вказує на папку /home/user/Downloads
+# for i in p.iterdir():
+#     print(i.name)   # Виведе у циклі імена всіх папок та файлів у /home/user/Downloads
+# 
+
+
+
+
+
+
 # *********************<<<<<<< Homework 1 >>>>>>>>>>****************
-=======
+# =======
 # numbers.extend("v")
 # print(numbers)
 # test_char=[]
@@ -70,7 +114,7 @@
 #     test_char.append(i*2)
 #     test.len(test_char)
 #     print(test_char, test)
->>>>>>> 1ef12916a0b28aaee42a04162615a48d9aa37474
+# >>>>>>> 1ef12916a0b28aaee42a04162615a48d9aa37474
 
 
 
@@ -122,7 +166,7 @@
 #         if a==key:
 #             print(my_dict_one[a])
 #             return my_dict_one[a]
-    
+
 # def get_description(key):
 #     for b in dict_zalik:
 #         if b==key:
@@ -215,17 +259,135 @@
 #         print(user.get(field))
 #         print(user.keys())
 
-def game(terra, power):
-    for sub_list in terra:
-        for element in sub_list:
-            if element <= power:
-                power += element
-            else:
-                break
-    print("power is", power)
-    return power
+
+# def game(terra, power):
+#     ''' gkxlkgjvsd asgdja'''
+#     for sub_list in terra:
+#         for element in sub_list:
+#             if element <= power:
+#                 power += element
+#             else:
+#                 break
+#     print("power is", power)
+#     return power
 
 
-terra=([1, 1, 5, 10])
-power=1
-game(terra, power)
+# terra=([1, 1, 5, 10])
+# power=1
+# game(terra, power)
+
+
+
+
+# *********************<<<<<<< Homework 7 >>>>>>>>>>****************
+# -------> theory
+# string_set = set("set")
+# print(string_set)  # {'s', ' ', 'y', 'M', 't', 'e'}
+# list_set = set(["My", "set", "one", "two", "tree"])  # {'My', 'set'}
+# print(list_set)
+# new_set = {1, 2, 3, "My", "set", "H", "i"}
+# print(new_set)  # {1, 2, 3, 'My', 'i', 'set', 'H'}
+# new_set.add("wow")
+# a=len(new_set)
+# print(">>>length a=", a)
+# print(new_set)
+# new_set.discard("wo")
+# b=len(new_set)
+# print(">>>length new_set nnow b =",b)
+# print(new_set)
+
+# first = {1, 2, 3, "My", "set", "one", "two", "tree"}
+# second = {3, 4, 5}
+# print("")
+# print("Пошук спільних елементів двох множин")
+# print("string_set&new_set --> ",string_set&new_set)
+# print("first & second -->", first & second)  # {3}
+# print("first & new_set --> ", first & new_set)
+# print("first & list_set -->", first & list_set)
+# print("")
+
+# print("Пошук всіх елементів з двох множин, крім спільних")
+# print("string_set ^ new_set --> ",string_set ^ new_set)
+# print("first ^ second -->", first ^ second)  # {3}
+# print("first ^ new_set --> ", first ^ new_set)
+# print("first ^ list_set -->", first ^ list_set)
+# print("")
+
+# print("Об'єднання двох множин")
+# print("string_set | new_set --> ",string_set | new_set)
+# print("first | second -->", first | second)  # {3}
+# print("first | new_set --> ", first | new_set)
+# print("first | list_set -->", first | list_set)
+
+
+# pin_true=['1101', '9034', '0011']
+# pin=input("Input pin code: ")
+
+# def is_valid_pin_codes(pin_codes):
+#     pin_true=['1101', '9034', '0011']
+#     for p in pin_true:
+#         p=int(p)
+#         print(p)
+#         if pin_codes==p:
+#             print(p, pin_codes)
+#             result=True
+#             break
+#         else:
+#             result=False
+#     print("result is - ", result)
+#     return result
+
+# print(is_valid_pin_codes(pin))
+
+# pin_codes = ['1222', '1234', '1001','1', '1111', '1234']
+
+
+# lst=pin_codes
+# def has_duplicates(lst):
+#     for i in range(len(lst)):
+#         for j in range(i + 1, len(lst)):
+#             if lst[i] == lst[j]:
+#                 return False
+#     return True
+
+# print(has_duplicates(lst))
+
+
+
+# -----> Homework
+# def is_valid_pin_codes(pin_codes):
+
+#     lst=pin_codes
+#     def has_duplicates(lst):
+#         for i in range(len(lst)):
+#             for j in range(i + 1, len(lst)):
+#                 if lst[i] == lst[j]:
+#                     return False
+#         return True
+
+#     print("has_duplicates(lst) -->", has_duplicates(lst))
+
+# #     if has_duplicates(lst):
+#         result = False
+#         a=len(pin_codes)
+#         print("a=", a)
+#         for item in pin_codes:
+#             b=len(item)
+#             print ("b= ",b)
+#             if item.isdigit() and b==4:
+#                 result = True
+#                 print("if",result)
+#             else: 
+#                 result = False
+#                 print("else", result)
+#                 break
+#         return result
+#     else: 
+#         print("List have two or more dublicate pin_code")
+#         return False
+         
+# print(is_valid_pin_codes(['1101', '9034', '0011']))
+
+
+
+
