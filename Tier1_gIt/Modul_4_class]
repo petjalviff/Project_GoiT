@@ -390,4 +390,42 @@
 
 
 
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+def is_valid_password(password):
+    def big_char(password):
+        return any(char.isupper() for char in password)
+    def lower_char(password):
+        return any(char.islower() for char in password)
+    def int_char(password):
+        return any(char.isdigit() for char in password)
 
+
+    if big_char(password) and lower_char(password) and len(password)>=8 and int_char(password):
+        print("Password містить велику літеру і малу літеру і більше 8 символів та має цифри.")
+        return True
+    else:
+        print("Пароль не надійний")
+        return False
+    
+is_valid_password("ясчичGj*дFG")
+
+
+
+
+
+
+
+
+
+# -----> Homework
+
+
+
+
+
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
