@@ -447,19 +447,18 @@
 
 
 
-# *********************<<<<<<< Homework 9 >>>>>>>>>>****************
-# -------> theory
-# -----> Homework
+# *********************<<<<<<< Homework 10 >>>>>>>>>>****************
+# # -------> theory
+# # -----> Homework
+# import sys
 
-import sys
+# def parse_args():
+#     # Повертаємо аргументи командного рядка, що йдуть після першого (перший - назва скрипта)
+#     return ' '.join(sys.argv[1:])
 
-def parse_args():
-    # Повертаємо аргументи командного рядка, що йдуть після першого (перший - назва скрипта)
-    return ' '.join(sys.argv[1:])
-
-# Приклад використання
-args_string = parse_args()
-print(args_string)
+# # Приклад використання
+# args_string = parse_args()
+# print(args_string)
 
 
 
