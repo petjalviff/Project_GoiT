@@ -123,21 +123,79 @@ import re
 # *********************<<<<<<< Homework 3 >>>>>>>>>>****************
 # -------> theory
 # -----> Homework
-def is_check_name(fullname, first_name):
-    check_name=fullname.startswith(first_name)
-    print(check_name)
-    return check_name
+# def is_check_name(fullname, first_name):
+#     check_name=fullname.startswith(first_name)
+#     print(check_name)
+#     return check_name
 
 
-fullname="Andrii Petryshyn"
-first_name="Andrii"
-secondname="Petryshyn"
-g=fullname.endswith(secondname)
-print(is_check_name(fullname, first_name))
-print(g)
+# fullname="Andrii Petryshyn"
+# first_name="Andrii"
+# secondname="Petryshyn"
+# g=fullname.endswith(secondname)
+# print(is_check_name(fullname, first_name))
+# print(g)
 
 
 
+
+# *********************<<<<<<< Homework 4 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+def sanitize_phone_number(phone):
+    text=phone.strip()
+    # print(text)
+    text=text.replace("(","")
+    # print(text)
+    text=text.removeprefix("+")
+    # print(text)
+    text=text.replace(")","")
+    # print(text)
+    text=text.replace("-","")
+    text=text.replace(" ","")
+    # print(text)
+    return text
+
+
+def get_phone_numbers_for_countries(list_phones):
+    dict={
+        "UA":[],
+        "JP":[],
+        "TW":[],
+        "SG":[],
+    }
+    for i in list_phones:
+        b=sanitize_phone_number(i)
+        # print(b)
+        find_ua=b.find("380")
+        find_jp=b.find("81")
+        find_sg=b.find("65")
+        find_tw=b.find("886")
+        if find_ua==0:
+            dict["UA"].append(b)
+        elif find_jp==0:
+            dict["JP"].append(b)
+        elif find_tw==0:
+            dict["TW"].append(b)
+        elif find_sg==0:
+            dict["SG"].append(b)
+        else:
+            dict["UA"].append(b)    
+    print(dict)
+    return dict
+
+
+list=["    +81(050)123-32-34","     0503451234","(050)8889900","88650-111-22-22","65050 111 22 11   ","38050-111-22-22", ]
+
+get_phone_numbers_for_countries(list)
+
+
+# *********************<<<<<<< Homework 5 >>>>>>>>>>****************
+# -------> theory
+
+
+
+# -----> Homework
 
 
 
