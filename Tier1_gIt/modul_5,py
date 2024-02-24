@@ -69,28 +69,54 @@ import re
 # -------> theory
 # -----> Homework
 
-def real_len(text):
-    special_chars = ['\n', '\f', '\r', '\t', '\v']
-    count=0
-    for char in text:
-        if char not in special_chars:
-            count=count+1
-    return count
+# def real_len(text):
+#     special_chars = ['\n', '\f', '\r', '\t', '\v']
+#     count=0
+#     for char in text:
+#         if char not in special_chars:
+#             count=count+1
+#     return count
 
 
-text='Alex\nKdfe23\t\f\v.\r'
-print("довжина рядка без наступних керівних символів становить - ", real_len(text))
+# text='Alex\nKdfe23\t\f\v.\r'
+# print("довжина рядка без наступних керівних символів становить - ", real_len(text))
 
 
 # *********************<<<<<<< Homework 2 >>>>>>>>>>****************
 # -------> theory
+# def sanitize_phone_number(phone_number):
+#     # Прибираємо всі символи, крім цифр
+#     sanitized_number = ''.join(char for char in phone_number if char.isdigit())
+#     return sanitized_number
 
+# # Приклад використання:
+# phone_number = "+1 (555) 123-4567"
+# sanitized_number = sanitize_phone_number(phone_number)
+# print("Нормалізований номер телефону:", sanitized_number)
+
+
+# i=4
+# sentences = ["I am learning strings in Python", "wqewrwr"]
+# text = ".23 ".join(sentences)
+# text2=sentences.append(i)
+# print(text) # I am learning strings in Python. Some new methods got now.
+# print(sentences)
 
 
 # -----> Homework
 
-
-
+def sanitize_phone_number(phone):
+    correct_number=[]
+    for i in phone:
+        print("i=",i)
+        print("correct_number =", correct_number)
+        if i.isdigit():
+            correct_number.append(i)
+            print("cor_numer after if = ", correct_number)
+    cor_numb=''.join(correct_number)
+    print(cor_numb)
+    return cor_numb
+print(sanitize_phone_number("    +38(050)123-32-34"))
 
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
