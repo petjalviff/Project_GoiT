@@ -105,18 +105,40 @@ import re
 
 # -----> Homework
 
-def sanitize_phone_number(phone):
-    correct_number=[]
-    for i in phone:
-        print("i=",i)
-        print("correct_number =", correct_number)
-        if i.isdigit():
-            correct_number.append(i)
-            print("cor_numer after if = ", correct_number)
-    cor_numb=''.join(correct_number)
-    print(cor_numb)
-    return cor_numb
-print(sanitize_phone_number("    +38(050)123-32-34"))
+# def sanitize_phone_number(phone):
+#     correct_number=[]
+#     for i in phone:
+#         print("i=",i)
+#         print("correct_number =", correct_number)
+#         if i.isdigit():
+#             correct_number.append(i)
+#             print("cor_numer after if = ", correct_number)
+#     cor_numb=''.join(correct_number)
+#     print(cor_numb)
+#     return cor_numb
+# print(sanitize_phone_number("    +38(050)123-32-34"))
+
+
+
+# *********************<<<<<<< Homework 3 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+def is_check_name(fullname, first_name):
+    check_name=fullname.startswith(first_name)
+    print(check_name)
+    return check_name
+
+
+fullname="Andrii Petryshyn"
+first_name="Andrii"
+secondname="Petryshyn"
+g=fullname.endswith(secondname)
+print(is_check_name(fullname, first_name))
+print(g)
+
+
+
+
 
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
