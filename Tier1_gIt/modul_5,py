@@ -215,13 +215,172 @@ import re
 # print(translate('Андрій Петришин'))
 
 
-# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# *********************<<<<<<< Homework 6 >>>>>>>>>>****************
 # -------> theory
+# def get_grade(key):
+#     for a in my_dict_one:
+#         if a==key:
+#             print(my_dict_one[a])
+#             return my_dict_one[a]
 
+# def get_description(key):
+#     for b in dict_zalik:
+#         if b==key:
+#             print(dict_zalik[b])
+#             return dict_zalik[b]
+
+# my_dict_one = {
+#     "F":1,
+#     "FX":2,
+#     "E":3,
+#     "D":3,
+#     "C":4,
+#     "B":5,
+#     "A":5
+#     }
+# dict_zalik= {
+#     "F": "Unsatisfactorily",
+#     "FX": "Unsatisfactorily",
+#     "E": "Enough",
+#     "D": "Satisfactorily",
+#     "C": "Good",
+#     "B": "Very good",
+#     "A": "Perfectly"
+#     }
+
+# print(my_dict_one)
+# key="F"
+# get_grade(key)
+# get_description(key)
+#****************************************
+
+# BALL_CH=("A", "B", "C", "D", "E", "FX", "F")
+# BALL_INT=(5,5,4,3,3,2,1)
+
+
+
+# TRANS = list(zip(BALL_CH,BALL_INT))
+# print(TRANS)
+
+# for cyrilic, latin in zip(CYRILLIC_SYMBOLS, TRANSLATION):
+#     TRANS[ord(cyrilic)] = latin
+#     TRANS[ord(cyrilic.upper())] = latin.upper()
+
+
+# for a in my_dict_one:
+#     if a == key:
+#         print(my_dict_one[a])
+
+# get_grade(3)
+# # print(my_dict_one.keys[0])
 
 
 # -----> Homework
+# grades = {"A": 5, "B": 5, "C": 4, "D": 3, "E": 3, "FX": 2, "F": 1}
+# students = {"Nick": "A", "Olga": "B", "Mike": "FX", "Anna": "C", "Andrii":"A",}
+# def get_grade(key):
+#     for a in grades:
+#         if a==key:
+#             # print(grades[a])
+#             return grades[a]
 
+# def formatted_grades(students):
+#     count=0
+#     name_list=[]
+#     for b in students:
+#         count+=1
+#         name=b
+#         key=students[b]
+#         ball=get_grade(key)
+#         name_list.append('{:>4}|{:<10}|{:^5}|{:^5}'.format(count, name, key, ball))
+#         # print(name_list)
+#     return name_list
+        
+    
+# for el in formatted_grades(students):
+#     print(el)
+#
+#
+# 
+ #********************<<<<<<< Homework 7 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework   
+
+
+# def formatted_numbers():
+#     result = []
+#     result.append("|{:^10}|{:^10}|{:^10}|".format("decimal","hex","binary"))
+#     # print("|{:<}|{:*^}|{:>}|".format("decimal", "hex", "binary"))
+    
+#     for el in range(16):
+#         table = "|{0:<10d}|{0:^10x}|{0:>10b}|".format(el)
+#         result.append(table)
+#         # print(table)
+#     return result
+
+# for el in formatted_numbers():
+#     print(el)
+
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# import re
+
+# def find_word(text, word):
+#     result = {}
+#     search = re.search(r'\b' + re.escape(word) + r'\b', text)
+#     if search:
+#         result['result'] = True
+#         result['first_index'] = search.start()
+#         result['last_index'] = search.end()
+#         result['search_string'] = word
+#         result['string'] = text
+#     else:
+#         result['result'] = False
+#         result['first_index'] = None
+#         result['last_index'] = None
+#         result['search_string'] = word
+#         result['string'] = text
+#     return result
+
+# print(find_word(
+#     "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.",
+#     "python"))
+
+
+# *********************<<<<<<< Homework 9 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# import re
+
+# def find_all_words(text, word):
+#     result = re.findall(r'\b' + re.escape(word) + r'\b', text, flags=re.IGNORECASE)
+#     return result
+
+# print(find_all_words(
+#     "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.",
+#     "python"))
+
+
+
+# *********************<<<<<<< Homework 10 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+import re
+
+def replace_spam_words(text, spam_words):
+    for a in spam_words:
+        a_star=len(a)*"*"
+        text = re.sub(a, a_star, text, flags=re.IGNORECASE)
+    return text
+
+print(replace_spam_words(
+    "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.",
+    ("python","late")))
 
 
 
