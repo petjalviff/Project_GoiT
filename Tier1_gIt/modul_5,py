@@ -1,1 +1,100 @@
+# jingle_bells = "Jingle bells, jingle bells\nJingle all the way\nOh, what fun it is to ride\nIn a one horse open sleigh"
+# print(jingle_bells)
+
+
+
+# s = "Hi there!"
+
+# start = 6
+# end = 7
+
+# print(s.find("H")) # 5
+# print(s.find("q"))  # -1
+
+
+# s = "I am learning strings in Python. Some new. methods got now."
+# sentences = s.split(". ")
+# fgfh=s.upper()
+
+# print(sentences[0]) # I am learning strings in Python
+# print(sentences[1]) # Some new methods got now.
+# print(sentences[2]) # Some new methods got now.
+# print(fgfh)
+
+
+# sentences = ["I am learning strings in Python", "Some new methods got now.", "Anymore"]
+# text = ". 123. ".join(sentences)
+# print(text) # I am learning strings in Python. Some new methods got now.
+# print(sentences)
+
+# map = {ord('з'): 'z', ord('ю'): 'u', ord('к'): 'k'}
+# translated = 'zukkk'.translate(map)
+# print(translated) # zu
+
+# for i in range(45):
+#     s = "int: {0:d};  hex: {0:#x};  oct: {0:#o};  bin: {0:#b}".format(i)
+#     print(s)
+
+
+# width = 5
+# for num in range(12):
+#     print('|{:^10} | {:^10} |{:^10}|{:^10}'.format(num, num**2, num**3, width))
+#     print("-"*35)
+
+
+# s =  "{name!r} {last_name!r}".format(last_name="Dilan", name="Bob")
+# print(s)  # 'Bob' Dilan
+
+# print('pi: {:0.3}'.format(35.1415568997563354))  # pi: 3.14
+
+import re
+
+# s = "I am 252 years 45 old56"
+# age = re.search('\d+', s)
+# print(age)  # <re.Match object; span=(5, 7), match='25'>
+# print(age.group())
+
+
+# # s = "I bought 7 nuts for 6$ and 10 bolts for 3$."
+# numbers = re.findall('\d+', s)
+# print(numbers)  # ['7', '6', '10', '3']
+
+# p = 'blue socks, White cap and red shoes'
+# s=re.sub(r'(blue|white|red)', 'colour', p)
+# print(s)    # colour socks and colour shoes
+
+
+
+# *********************<<<<<<< Homework 1 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+def real_len(text):
+    special_chars = ['\n', '\f', '\r', '\t', '\v']
+    count=0
+    for char in text:
+        if char not in special_chars:
+            count=count+1
+    return count
+
+
+text='Alex\nKdfe23\t\f\v.\r'
+print("довжина рядка без наступних керівних символів становить - ", real_len(text))
+
+
+# *********************<<<<<<< Homework 2 >>>>>>>>>>****************
+# -------> theory
+
+
+
+# -----> Homework
+
+
+
+
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
 
