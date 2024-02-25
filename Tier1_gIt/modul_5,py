@@ -12,14 +12,16 @@
 # print(s.find("q"))  # -1
 
 
-# s = "I am learning strings in Python. Some new. methods got now."
-# sentences = s.split(". ")
-# fgfh=s.upper()
+s = "I am learning strings in Python. Some new. methods got now."
+print(s)
+sentences = s.split(". ")
+print(sentences)
+fgfh=s.upper()
 
-# print(sentences[0]) # I am learning strings in Python
-# print(sentences[1]) # Some new methods got now.
-# print(sentences[2]) # Some new methods got now.
-# print(fgfh)
+print(sentences[0]) # I am learning strings in Python
+print(sentences[1]) # Some new methods got now.
+print(sentences[2]) # Some new methods got now.
+print(fgfh)
 
 
 # sentences = ["I am learning strings in Python", "Some new methods got now.", "Anymore"]
@@ -47,7 +49,7 @@
 
 # print('pi: {:0.3}'.format(35.1415568997563354))  # pi: 3.14
 
-import re
+# import re
 
 # s = "I am 252 years 45 old56"
 # age = re.search('\d+', s)
@@ -370,17 +372,17 @@ import re
 # -------> theory
 # -----> Homework
 
-import re
+# import re
 
-def replace_spam_words(text, spam_words):
-    for a in spam_words:
-        a_star=len(a)*"*"
-        text = re.sub(a, a_star, text, flags=re.IGNORECASE)
-    return text
+# def replace_spam_words(text, spam_words):
+#     for a in spam_words:
+#         a_star=len(a)*"*"
+#         text = re.sub(a, a_star, text, flags=re.IGNORECASE)
+#     return text
 
-print(replace_spam_words(
-    "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.",
-    ("python","late")))
+# print(replace_spam_words(
+#     "Guido van Rossum began working on Python in the late 1980s, as a successor to the ABC programming language, and first released it in 1991 as Python 0.9.0.",
+#     ("python","late")))
 
 
 
