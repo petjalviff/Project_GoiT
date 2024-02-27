@@ -250,45 +250,28 @@
 # *********************<<<<<<< Homework 10 >>>>>>>>>>****************
 # -------> theory
 # -----> Homework
-# import shutil
-
-# employee_residence={'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}
-# path="e:/Projects/Project_GoiT/Tier1_gIt/modul_6"
-# file_name="data2.bin"
-
-# def create_backup(path, file_name, employee_residence):
-#     path2=path+"/"+file_name
-
-#     with open(path2,'wb') as f:
-#         for username,password in employee_residence.items():
-#             text_info = f"{username} {password}\n"
-#             print(text_info)
-#             text_bin=text_info.encode()
-#             f.write(text_bin)
-#     backup_folder="backup_folder"
-#     backup_path=path+"/"+backup_folder+".zip"
-    
-#     # backup_path_f=backup_path+".zip"
-#     return shutil.make_archive(backup_path, "zip", path )
-
-# print(create_backup(path, file_name, employee_residence))
-
-
-# *********************<<<<<<< Homework 11 >>>>>>>>>>****************
-# -------> theory
-# -----> Homework
 import shutil
 
+employee_residence={'Michael': 'Canada', 'John': 'USA', 'Liza': 'Australia'}
+path="e:/Projects/Project_GoiT/Tier1_gIt/modul_6"
+file_name="data2.bin"
 
-path_to_unpack=r"e:\Projects\Project_GoiT\Tier1_gIt\modul_6\hfolder"
-archive_path=r"e:\Projects\Project_GoiT\Tier1_gIt\modul_6\xfolder.zip"
+def create_backup(path, file_name, employee_residence):
+    path2=path+"/"+file_name
 
-def unpack(archive_path, path_to_unpack):
-    shutil.unpack_archive(archive_path,path_to_unpack)
+    with open(path2,'wb') as f:
+        for username,password in employee_residence.items():
+            text_info = f"{username} {password}\n"
+            print(text_info)
+            text_bin=text_info.encode()
+            f.write(text_bin)
+    backup_folder="backup_folder"
+    backup_path=path+"/"+backup_folder+".zip"
+    
+    # backup_path_f=backup_path+".zip"
+    return shutil.make_archive(backup_path, "zip", path )
 
-unpack(archive_path, path_to_unpack)
-
-
+print(create_backup(path, file_name, employee_residence))
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
 # -------> theory
