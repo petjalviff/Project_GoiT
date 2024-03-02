@@ -392,6 +392,44 @@
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
 # -------> theory
+# password=("zg;f46HG2dflk")
+def is_password_correct(password):
+    # def big_char(world):
+    big_char=False
+    for i in password:
+        if i.isupper():
+            print(i)
+            big_char=True
+            break
+    print("big_char", big_char)
+    # print(big_char(password))
+    l_char=False
+    for i in password:
+        if i.islower():
+            print(i)
+            l_char=True
+            break
+    int_char=False
+    for i in password:
+        if i.isdigit():
+            print(i)
+            int_char=True
+            break
+    len_password=False
+    l=len(password)
+    if l>7:
+        len_password=True
+        print(l)
+    if big_char and l_char and int_char and len_password:
+        print("password is very good")
+    else:
+        print("your passwod is not correct, try again:")
+    return True
+print(is_password_correct("zg;f4KK62dflk"))
+
+
+
+
 # -----> Homework
 # def is_valid_password(password):
 #     def big_char(password):
