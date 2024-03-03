@@ -120,41 +120,75 @@
 # -------> theory
 # -----> Homework
 
-# output="e:/Projects/Project_GoiT/Tier1_gIt/modul_6/data.txt"
+# path="C:\Project_GoiT\Project_GoiT\Tier1_gIt\modul_7\data23.txt"
+# additional_info="\nHello Igor, what are you do?"
+# start_pos=5
+# count_chars=15
 
-path="e:/Projects/Project_GoiT/Tier1_gIt/modul_7/data.txt"
-additional_info="additional_info"
-start_pos=5
-count_chars=15
+# def file_operations(path, additional_info, start_pos, count_chars):
+#     with open(path,"a") as file:
+#         file.write(additional_info)
+#     with open(path,"r") as file:
+#         file.seek(start_pos)
+#         text=file.read(count_chars)
+#         print(text)
+
+# file_operations(path, additional_info, start_pos, count_chars)
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# path="C:\Project_GoiT\Project_GoiT\Tier1_gIt\modul_7\data23.txt"
+# profession=("courier" )
+
+# def get_employees_by_profession(path, profession):
+#     with open(path,"r") as file:
+#         lines=file.readlines()
+#         # print(lines)
+#         text=[]
+#         for line in lines:
+#             line.find(profession)
+#             # print(line)
+#             if line.find(profession) !=-1:
+#                 line=line.replace(profession,"")
+#                 line=line.strip()
+
+#                 text.append(line)
+#         print(text)
+#         # clean_text=text.str
+#         res_text=" ".join(text)
+#         print(res_text)
+#         # res_text=res_text.replace(profession, "")
+#     print (res_text)
+#     return res_text
 
 
-def file_operations(path, additional_info, start_pos, count_chars):
-    with open(path,"w") as file:
-        file.write(additional_info)
-    with open(path,"r") as file:
-        text=file.readline()
-        print(text)
-        text.seek(start_pos)
-        
+
+# get_employees_by_profession(path, profession)
 
 
+# *********************<<<<<<< Homework 9 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+# source_file="C:\Project_GoiT\Project_GoiT\Tier1_gIt\modul_7\data23.txt"
+# output_file="C:\Project_GoiT\Project_GoiT\Tier1_gIt\modul_7\data24.txt"
 
-def sanitize_file(source, output):
-   
-    with open(source, 'r') as source_file:  
-        text = source_file.read()
-        
-    
-    clear_text = ''.join(char for char in text if not char.isdigit())
-    # clear_text=()
-    # for char in text:
-    #      if not char.isdigit:
-    #         clear_text="".join(char)
-    # print(clear_text)
-    with open(output, 'w') as output_file:
-            output_file.write(clear_text)
+# def to_indexed(source_file, output_file):
+#     with open(source_file,"r") as file:
+#         lines=file.readlines()
+#     text=[]
+#     i=0
+#     for line in lines:
+#         text.append(f"{i}: {line}")
+#         i=i+1
+#     print(text)
+#     with open(output_file, "w") as file:
+#         for a in text:
+#             file.write(a)
+#     return text
 
-sanitize_file(source, output)
+# to_indexed(source_file, output_file)
 
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
