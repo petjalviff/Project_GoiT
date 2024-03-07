@@ -12,16 +12,16 @@
 # print(s.find("q"))  # -1
 
 
-s = "I am learning strings in Python. Some new. methods got now."
-print(s)
-sentences = s.split(". ")
-print(sentences)
-fgfh=s.upper()
+# s = "I am learning strings in Python. Some new. methods got now."
+# print(s)
+# sentences = s.split(". ")
+# print(sentences)
+# fgfh=s.upper()
 
-print(sentences[0]) # I am learning strings in Python
-print(sentences[1]) # Some new methods got now.
-print(sentences[2]) # Some new methods got now.
-print(fgfh)
+# print(sentences[0]) # I am learning strings in Python
+# print(sentences[1]) # Some new methods got now.
+# print(sentences[2]) # Some new methods got now.
+# print(fgfh)
 
 
 # sentences = ["I am learning strings in Python", "Some new methods got now.", "Anymore"]
