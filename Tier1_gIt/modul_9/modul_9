@@ -156,6 +156,17 @@
 # print(sanitize_phone_number(phone))
 
 
+# *********************<<<<<<< Homework 6 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# def normal_name(names):
+#     return list(map(lambda x: x.capitalize(), names))
+
+# name = ["dan", "jane", "steve", "mike"]
+# name_norm = normal_name(name)
+# print(name_norm)
+
 
 
 
