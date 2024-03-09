@@ -245,14 +245,14 @@
 # print(sum)
 # -----> Homework
 
-from functools import reduce
+# from functools import reduce
 
-numbers = [3, 4, 6, 9, 34, 12]
+# numbers = [3, 4, 6, 9, 34, 12]
 
-def sum_numbers(numbers):
-    sum=reduce((lambda x, y: x+y), numbers)
-    return sum
-print (sum_numbers(numbers))
+# def sum_numbers(numbers):
+#     sum=reduce((lambda x, y: x+y), numbers)
+#     return sum
+# print (sum_numbers(numbers))
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************
 # -------> theory
