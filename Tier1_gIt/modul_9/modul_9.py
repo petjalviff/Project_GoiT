@@ -196,16 +196,16 @@
 # -----> Homework
 
 
-# payment = [100, -3, 400, 35, -100]
+payment = [100, -3, 400, 35, -100]
 
-# def positive_values(list_payment):
-#     list_value=[]
-#     for a in filter(lambda y:y>=0,list_payment):
-#         list_value.append(a)
-#     return list_value
+def positive_values(list_payment):
+    list_value=[]
+    for a in filter(lambda y:y>=0,list_payment):
+        list_value.append(a)
+    return list_value
 
 
-# print(positive_values(payment))
+print(positive_values(payment))
 
 # *********************<<<<<<< Homework 9 >>>>>>>>>>****************
 # -------> theory

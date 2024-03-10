@@ -132,41 +132,41 @@
 #     except NameOnlyLeters:
 #         print ("Name must have only leters")
 
-class Mammal:
-    phrase = '1'
-    def voice(self):
-        return self.phrase
+# class Mammal:
+#     phrase = '1'
+#     def voice(self):
+#         return self.phrase
 
 
-class Dog(Mammal):
-    phrase = 'Bark!'
+# class Dog(Mammal):
+#     phrase = 'Bark!'
 
 
 
-class Cat(Mammal):
-    phrase = 'Meow!'
+# class Cat(Mammal):
+#     phrase = 'Meow!'
 
 
-class Chupakabra:
-    hghghgh="1111112"
-    def voice(self):
-        # return 'Whooooo!!!'
-        return self.hghghgh
+# class Chupakabra:
+#     hghghgh="1111112"
+#     def voice(self):
+#         # return 'Whooooo!!!'
+#         return self.hghghgh
 
 
-class Recorder:
-    def record_animal(self, animal):
-        voice2 = animal.voice()
-        print(f'Recorded "{voice2}"')
+# class Recorder:
+#     def record_animal(self, animal):
+#         voice2 = animal.voice()
+#         print(f'Recorded "{voice2}"')
 
 
-r = Recorder()
-cat = Cat()
-dog = Dog()
-strange_animal = Chupakabra()
+# r = Recorder()
+# cat = Cat()
+# dog = Dog()
+# strange_animal = Chupakabra()
 
-r.record_animal(cat)            # Recorded "Meow!"
-r.record_animal(dog)            # Recorded "Bark!"
-r.record_animal(strange_animal) # Recorded "Whooooo!!!"
+# r.record_animal(cat)            # Recorded "Meow!"
+# r.record_animal(dog)            # Recorded "Bark!"
+# r.record_animal(strange_animal) # Recorded "Whooooo!!!"
 
 
