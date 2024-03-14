@@ -174,49 +174,55 @@
 
 # -----> Homework
 
-import csv
+# import csv
 
-contacts=[
-    {"name": "Allen Raymond",
-    "email": "nulla.ante@vestibul.co.uk",
-    "phone": "(992) 914-3792",
-    "favorite": False,
-    },
-    {"name": "Andrii Petryshyn",
-    "email": "andrii@vestibul.co.uk",
-    "phone": "(097) 914-3792",
-    "favorite": True,
-    },
-    {"name": "Igor Petryshyn",
-    "email": "igorp@vestibul.co.uk",
-    "phone": "(073) 914-3792",
-    "favorite": False,
-    },
-]
+# contacts=[
+#     {"name": "Allen Raymond",
+#     "email": "nulla.ante@vestibul.co.uk",
+#     "phone": "(992) 914-3792",
+#     "favorite": False,
+#     },
+#     {"name": "Andrii Petryshyn",
+#     "email": "andrii@vestibul.co.uk",
+#     "phone": "(097) 914-3792",
+#     "favorite": True,
+#     },
+#     {"name": "Igor Petryshyn",
+#     "email": "igorp@vestibul.co.uk",
+#     "phone": "(073) 914-3792",
+#     "favorite": False,
+#     },
+# ]
 
-
-file_name= "c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/expenses_hw.txt"
-
-with open(file_name, 'w', newline='') as fh:
-    f_n = ['first_name', 'last_name']
-    writer = csv.DictWriter(fh, fieldnames=f_n)
-    writer.writeheader()
-    writer.writerow({'first_name': 'Baked', 'last_name': 'Beans'})
-    writer.writerow({'first_name': 'Lovely', 'last_name': 'Spam'})
-    writer.writerow({'first_name': 'Wonderful', 'last_name': 'Spam'})
-
+# file_name= "c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/names_hw.csv"
 
 
 # def write_contacts_to_file(filename, contacts):
-    
-    
-        
-        
-        
-            
-
+#     with open(filename, 'w', newline='') as fh:
+#         f_n = ["name", "email","phone","favorite"]
+#         writer = csv.DictWriter(fh, fieldnames=f_n)
+#         writer.writeheader()
+#         for cont in contacts:
+#             writer.writerow({'name': cont["name"], "email": cont["email"], "phone":cont["phone"], "favorite":cont["favorite"] })
+#     return print("All contacts added to file")
 
 # def read_contacts_from_file(filename):
+#     list_contacts=[]
+#     with open(filename,"r", newline='') as fh: 
+#         reader = csv.DictReader(fh) 
+#         for row_i in reader:
+#             row_i["favorite"]=row_i["favorite"] =="True"
+#             list_contacts.append(row_i)
+#         return list_contacts
+
+
+# write_contacts_to_file(file_name,contacts)
+# print(read_contacts_from_file(file_name))
+
+# *********************<<<<<<< Homework 4 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
 
 
 
