@@ -221,7 +221,144 @@
 
 # *********************<<<<<<< Homework 4 >>>>>>>>>>****************
 # -------> theory
+# import pickle
+
+
+# some_data = {
+#     (1, 3.5): 'tuple',
+#     2: [1, 2, 3],
+#     'a': {'key': 'value'}
+# }
+
+# file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data.bin'
+
+# with open(file_name, "wb") as fh:
+#     pickle.dump(some_data, fh)
+
+
+# with open(file_name, "rb") as fh:
+#     unpacked = pickle.load(fh)
+
+
+# print(unpacked == some_data)    # True
+# print(unpacked is some_data)    # False
+
 # -----> Homework
+
+# import pickle
+
+# file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data_hw.bin'
+
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name=name
+#         self.email=email
+#         self.phone=phone
+#         self.favorite=favorite
+      
+
+# class Contacts:
+#     def __init__(self, filename: str, contacts: list[Person] = None):
+#         self.filename=filename
+#         self.contacts=contacts
+#         if contacts is None:
+#             contacts = []
+   
+#     def save_to_file(self):
+#         with open(self.filename, "wb") as fh:
+#             # pickle.dump(self.contacts,  fh) # такий код передає лише contacts
+#             pickle.dump(self,  fh) # такий варіант коду передає (зберігає) екземпляр класу Contacts 
+#             print ("contscts added to binary file")
+
+#     def read_from_file(self):
+#         with open(self.filename, "r") as fh:
+#             unpacked=pickle.load(fh)
+#             print(unpacked)
+#         return unpacked
+
+
+# *********************<<<<<<< Homework 5 >>>>>>>>>>****************
+# -------> theory
+
+# -----> Homework
+
+# import pickle
+
+# file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data_hw.bin'
+
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
+#         self.favorite = favorite
+
+
+# class Contacts:
+#     def __init__(self, filename: str, contacts: list[Person] = None):
+#         if contacts is None:
+#             contacts = []
+#         self.filename = filename
+#         self.contacts = contacts
+#         self.count_save=0
+
+#     def save_to_file(self):
+#         with open(self.filename, "wb") as file:
+#             pickle.dump(self, file)
+
+#     def read_from_file(self):
+#         with open(self.filename, "rb") as file:
+#             content = pickle.load(file)
+#         return content
+    
+#     def __getstate__(self):
+#         atributes=self.__dict__.copy()
+#         atributes["count_save"]+=1
+#         return atributes
+
+# *********************<<<<<<< Homework 6 >>>>>>>>>>****************
+# -------> theory
+
+# -----> Homework
+
+import pickle
+
+file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data_hw.bin'
+
+class Person:
+    def __init__(self, name: str, email: str, phone: str, favorite: bool):
+        self.name = name
+        self.email = email
+        self.phone = phone
+        self.favorite = favorite
+
+
+class Contacts:
+    def __init__(self, filename: str, contacts: list[Person] = None):
+        if contacts is None:
+            contacts = []
+        self.filename = filename
+        self.contacts = contacts
+        self.count_save=0
+        self.is_unpacking=False
+
+    def save_to_file(self):
+        with open(self.filename, "wb") as file:
+            pickle.dump(self, file)
+
+    def read_from_file(self):
+        with open(self.filename, "rb") as file:
+            content = pickle.load(file)
+        return content
+    
+    def __getstate__(self):
+        atributes=self.__dict__.copy()
+        atributes["count_save"]+=1
+        return atributes
+    
+    def __setstate__(self, value):
+        self.__dict__.update(value)
+        self.is_unpacking=True
 
 
 
