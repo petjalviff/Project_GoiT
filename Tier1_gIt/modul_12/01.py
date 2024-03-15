@@ -176,43 +176,46 @@ print(unpacked is some_data)    # False
 
 
 # # *********************<<<<<<< 2. ССеріалізація об'єктів Python за допомогою pickle >>>>>>>>>>****************
+from copy import deepcopy, copy
+
+class Expenses:
+    def __init__(self):
+        self.data = {}
+        self.places = []
+
+    def spent(self, place, value):
+        self.data[str(place)] = value
+        self.places.append(place)
+
+    def __copy__(self):
+        copy_obj = Expenses()
+        copy_obj.data = copy(self.data)
+        copy_obj.places = copy(self.places)
+        return copy_obj
+
+    def __deepcopy__(self, memo):
+        dcopy_class_c = Contacts(self.filename, copy.deepcopy(self.contacts, memo))
+        memo[id(dcopy_class_c)] = dcopy_class_c
+        dcopy_class_c.is_unpacking = copy.deepcopy(self.is_unpacking, memo)
+        dcopy_class_c.count_save = copy.deepcopy(self.count_save, memo)
+        return dcopy_class_c
 
 
-import pickle
+e = Expenses()
+e.spent('hotel', 100)
+e.spent('taxi', 10)
+print(e.places)  # ['hotel', 'taxi']
 
-import pickle
+e_copy = copy(e)
+print(e_copy is e)  # False
+e_copy.spent('bar', 30)
+print(e.places)  # ['hotel', 'taxi', 'bar']
 
-class Person:
-    def __init__(self, name: str, email: str, phone: str, favorite: bool):
-        self.name = name
-        self.email = email
-        self.phone = phone
-        self.favorite = favorite
-
-class Contacts:
-    def __init__(self, filename: str, contacts: list[Person] = None, count_save: int = 0, is_unpacking: bool = False):
-        if contacts is None:
-            contacts = []
-        self.filename = filename
-        self.contacts = contacts
-        self.count_save = count_save
-        self.is_unpacking = is_unpacking
-
-    def save_to_file(self):
-        with open(self.filename, "wb") as file:
-            pickle.dump(self, file)
-
-    
-    def read_from_file(self):
-        with open(self.filename, "rb") as file:
-            content = pickle.load(file)
-        return content
-
-    def __getstate__(self):
-        state = self.__dict__.copy()
-        state['count_save'] += 1
-        return state
-    
-    def __setstate__(self, state):
-        self.__dict__.update(state)
-        self.is_unpacking = True
+e_deep_copy = deepcopy(e)
+print(e_deep_copy is e)  # False
+e_deep_copy.spent(
+    'airport',
+    300
+)
+print(e.places)  # ['hotel', 'taxi', 'bar']
+print(e_deep_copy.places)  # ['hotel', 'taxi', 'bar', 'airport']

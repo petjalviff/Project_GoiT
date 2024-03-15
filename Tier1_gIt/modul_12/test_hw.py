@@ -108,7 +108,7 @@ class AddressBook:
                 print(f"{day_name}: {', '.join(names)}")
 
 
-def handle_add(args, book):
+def handle_add(args, book):  #додавання контакту
     if len(args) != 2:
         return "Invalid command. Please provide name and phone."
     name, phone = args
@@ -117,15 +117,15 @@ def handle_add(args, book):
     book.add_record(record)
     return "Contact added."
 
-def handle_change(args, book):
+def handle_change(args, book): #зміна телефону
     if len(args) != 2:
         return "Invalid command. Please provide name and new phone."
     name, new_phone = args
     record = book.find(name)
     if record:
-        old_phone = record.find_phone(new_phone)
-        if old_phone:
-            record.remove_phone(old_phone)
+        # old_phone = record.find_phone(new_phone)
+        # if old_phone:
+        #     record.remove_phone(old_phone)
         record.add_phone(new_phone)
         return "Phone number updated."
     else:

@@ -321,46 +321,221 @@
 
 # -----> Homework
 
-import pickle
+# import pickle
 
-file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data_hw.bin'
+# file_name = 'c:/Project_GoiT/Project_GoiT/Tier1_gIt/modul_12/data_hw.bin'
 
-class Person:
-    def __init__(self, name: str, email: str, phone: str, favorite: bool):
-        self.name = name
-        self.email = email
-        self.phone = phone
-        self.favorite = favorite
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
+#         self.favorite = favorite
 
 
-class Contacts:
-    def __init__(self, filename: str, contacts: list[Person] = None):
-        if contacts is None:
-            contacts = []
-        self.filename = filename
-        self.contacts = contacts
-        self.count_save=0
-        self.is_unpacking=False
+# class Contacts:
+#     def __init__(self, filename: str, contacts: list[Person] = None):
+#         if contacts is None:
+#             contacts = []
+#         self.filename = filename
+#         self.contacts = contacts
+#         self.count_save=0
+#         self.is_unpacking=False
 
-    def save_to_file(self):
-        with open(self.filename, "wb") as file:
-            pickle.dump(self, file)
+#     def save_to_file(self):
+#         with open(self.filename, "wb") as file:
+#             pickle.dump(self, file)
 
-    def read_from_file(self):
-        with open(self.filename, "rb") as file:
-            content = pickle.load(file)
-        return content
+#     def read_from_file(self):
+#         with open(self.filename, "rb") as file:
+#             content = pickle.load(file)
+#         return content
     
-    def __getstate__(self):
-        atributes=self.__dict__.copy()
-        atributes["count_save"]+=1
-        return atributes
+#     def __getstate__(self):
+#         atributes=self.__dict__.copy()
+#         atributes["count_save"]+=1
+#         return atributes
     
-    def __setstate__(self, value):
-        self.__dict__.update(value)
-        self.is_unpacking=True
+#     def __setstate__(self, value):
+#         self.__dict__.update(value)
+#         self.is_unpacking=True
 
 
+# *********************<<<<<<< Homework 7 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# import copy
+
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
+#         self.favorite = favorite
+
+
+# def copy_class_person(person):
+#     copy_class=copy.copy(person)
+#     return copy_class
+
+
+# person = Person(
+#     "Allen Raymond",
+#     "nulla.ante@vestibul.co.uk",
+#     "(992) 914-3792",
+#     False,
+# )
+
+# copy_person = copy_class_person(person)
+
+# print(copy_person == person)  # False
+# print(copy_person.name == person.name)  # True
+
+# *********************<<<<<<< Homework 8 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+
+# import copy
+# import pickle
+
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
+#         self.favorite = favorite
+
+
+# def copy_class_person(person):
+#     return copy.copy(person)
+
+
+# class Contacts:
+#     def __init__(self, filename: str, contacts: list[Person] = None):
+#         if contacts is None:
+#             contacts = []
+#         self.filename = filename
+#         self.contacts = contacts
+#         self.is_unpacking = False
+#         self.count_save = 0
+
+#     def save_to_file(self):
+#         with open(self.filename, "wb") as file:
+#             pickle.dump(self, file)
+
+#     def read_from_file(self):
+#         with open(self.filename, "rb") as file:
+#             content = pickle.load(file)
+#         return content
+
+#     def __getstate__(self):
+#         attributes = self.__dict__.copy()
+#         attributes["count_save"] = attributes["count_save"] + 1
+#         return attributes
+
+#     def __setstate__(self, value):
+#         self.__dict__ = value
+#         self.is_unpacking = True
+
+
+# def copy_class_contacts(contacts):
+#     class_deepcopy=copy.deepcopy(contacts)
+#     return class_deepcopy
+
+
+
+# contacts2 = [
+#     Person(
+#         name="Allen Raymond",
+#         email="nulla.ante@vestibul.co.uk",
+#         phone="(992) 914-3792",
+#         favorite=False,
+#     ),
+#     Person(
+#         name="Andrii Petryshyn",
+#         email="andrii@vestibul.co.uk",
+#         phone="(097) 914-3792",
+#         favorite=True,
+#     ),
+#     Person(
+#         name="Igor Petryshyn",
+#         email="igorp@vestibul.co.uk",
+#         phone="(073) 914-3792",
+#         favorite=False,
+#     ),
+# ]
+
+
+# persons = Contacts("user_class.dat", contacts2)
+# print(persons.contacts[0].name)
+# new_persons = copy_class_contacts(persons)
+
+# new_persons.contacts[0].name = "Another name"
+
+# print(persons.contacts[0].name)  
+# print(new_persons.contacts[0].name)  # Another name
+
+# print("")
+# print("class persons", persons)
+# print("")
+
+# print("class new_perssns", new_persons)
+
+
+# *********************<<<<<<< Homework 9 >>>>>>>>>>****************
+# -------> theory
+# -----> Homework
+# from copy import deepcopy, copy
+
+
+# class Person:
+#     def __init__(self, name: str, email: str, phone: str, favorite: bool):
+#         self.name = name
+#         self.email = email
+#         self.phone = phone
+#         self.favorite = favorite
+
+#     def __copy__(self):
+#         copy_class_p=Person(self.name, self.email, self.phone, self.favorite)
+#         return copy_class_p
+
+
+# class Contacts:
+#     def __init__(self, filename: str, contacts: list[Person] = None):
+#         if contacts is None:
+#             contacts = []
+#         self.filename = filename
+#         self.contacts = contacts
+#         self.is_unpacking = False
+#         self.count_save = 0
+
+#     def save_to_file(self):
+#         with open(self.filename, "wb") as file:
+#             pickle.dump(self, file)
+
+#     def read_from_file(self):
+#         with open(self.filename, "rb") as file:
+#             content = pickle.load(file)
+#         return content
+
+#     def __getstate__(self):
+#         attributes = self.__dict__.copy()
+#         attributes["count_save"] = attributes["count_save"] + 1
+#         return attributes
+
+#     def __setstate__(self, value):
+#         self.__dict__ = value
+#         self.is_unpacking = True
+
+#     def __copy__(self):
+#         copy_class_c=Contacts(self.filename,self.contacts)
+#         return copy_class_c
+
+#     def __deepcopy__(self, memo):
+#         dcopy = Contacts(self.filename, copy.deepcopy(self.contacts, memo))
+#         memo[id(self)] = dcopy
+#         return dcopy
 
 
 # *********************<<<<<<< Homework 8 >>>>>>>>>>****************

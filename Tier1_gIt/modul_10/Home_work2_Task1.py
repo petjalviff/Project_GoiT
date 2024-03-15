@@ -51,7 +51,8 @@ def main():
         elif command == "phone":
             for name in args:
                 print(name, ":", contacts.get(name))
-
+        elif command == "commands":
+            print("all commands: hello, add, change, all, phone, commands")
         else:
             print("Invalid command.")
 
