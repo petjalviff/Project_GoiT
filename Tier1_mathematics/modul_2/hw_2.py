@@ -29,29 +29,29 @@
 # -------> theory
 # -----> Homework
 
-# import numpy as np
+import numpy as np
 
-# A=np.array(
-#     [[-1,1,2],
-#      [-1, 0, -3],
-#      [4, -3, 2],
-#     ])
-# B=np.array([1,-4,7])
-# res=np.linalg.solve(A,B)
+A=np.array(
+    [[-1,1,2],
+     [0, -1, -3],
+     [4, -3, 2],
+    ])
+B=np.array([1,-4,7])
+res=np.linalg.solve(A,B)
 # print(res)
-# a=A
-# b=B
-# def solve_cramer (a,b):
-#     n=len(b)
-#     # print(n)
-#     x=np.zeros(n)
-#     # print(x)
-#     det_a=np.linalg.det(a)
-#     # print(det_a)
-#     for i in range(n):
-#         a_i=a.copy()
-#         a_i[:,i]=B
-#         x[i]=np.linalg.det(a_i)/det_a
-#         # print(x)
-#     return x
-# print (solve_cramer(A,B))
+a=A
+b=B
+def solve_cramer (a,b):
+    n=len(b)
+    # print(n)
+    x=np.zeros(n)
+    # print(x)
+    det_a=np.linalg.det(a)
+    # print(det_a)
+    for i in range(n):
+        a_i=a.copy()
+        a_i[:,i]=B
+        x[i]=np.linalg.det(a_i)/det_a
+        # print(x)
+    return x
+print (solve_cramer(A,B))
