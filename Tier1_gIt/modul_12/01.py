@@ -176,46 +176,46 @@ print(unpacked is some_data)    # False
 
 
 # # *********************<<<<<<< 2. ССеріалізація об'єктів Python за допомогою pickle >>>>>>>>>>****************
-from copy import deepcopy, copy
+# from copy import deepcopy, copy
 
-class Expenses:
-    def __init__(self):
-        self.data = {}
-        self.places = []
+# class Expenses:
+#     def __init__(self):
+#         self.data = {}
+#         self.places = []
 
-    def spent(self, place, value):
-        self.data[str(place)] = value
-        self.places.append(place)
+#     def spent(self, place, value):
+#         self.data[str(place)] = value
+#         self.places.append(place)
 
-    def __copy__(self):
-        copy_obj = Expenses()
-        copy_obj.data = copy(self.data)
-        copy_obj.places = copy(self.places)
-        return copy_obj
+#     def __copy__(self):
+#         copy_obj = Expenses()
+#         copy_obj.data = copy(self.data)
+#         copy_obj.places = copy(self.places)
+#         return copy_obj
 
-    def __deepcopy__(self, memo):
-        dcopy_class_c = Contacts(self.filename, copy.deepcopy(self.contacts, memo))
-        memo[id(dcopy_class_c)] = dcopy_class_c
-        dcopy_class_c.is_unpacking = copy.deepcopy(self.is_unpacking, memo)
-        dcopy_class_c.count_save = copy.deepcopy(self.count_save, memo)
-        return dcopy_class_c
+#     def __deepcopy__(self, memo):
+#         dcopy_class_c = Contacts(self.filename, copy.deepcopy(self.contacts, memo))
+#         memo[id(dcopy_class_c)] = dcopy_class_c
+#         dcopy_class_c.is_unpacking = copy.deepcopy(self.is_unpacking, memo)
+#         dcopy_class_c.count_save = copy.deepcopy(self.count_save, memo)
+#         return dcopy_class_c
 
 
-e = Expenses()
-e.spent('hotel', 100)
-e.spent('taxi', 10)
-print(e.places)  # ['hotel', 'taxi']
+# e = Expenses()
+# e.spent('hotel', 100)
+# e.spent('taxi', 10)
+# print(e.places)  # ['hotel', 'taxi']
 
-e_copy = copy(e)
-print(e_copy is e)  # False
-e_copy.spent('bar', 30)
-print(e.places)  # ['hotel', 'taxi', 'bar']
+# e_copy = copy(e)
+# print(e_copy is e)  # False
+# e_copy.spent('bar', 30)
+# print(e.places)  # ['hotel', 'taxi', 'bar']
 
-e_deep_copy = deepcopy(e)
-print(e_deep_copy is e)  # False
-e_deep_copy.spent(
-    'airport',
-    300
-)
-print(e.places)  # ['hotel', 'taxi', 'bar']
-print(e_deep_copy.places)  # ['hotel', 'taxi', 'bar', 'airport']
+# e_deep_copy = deepcopy(e)
+# print(e_deep_copy is e)  # False
+# e_deep_copy.spent(
+#     'airport',
+#     300
+# )
+# print(e.places)  # ['hotel', 'taxi', 'bar']
+# print(e_deep_copy.places)  # ['hotel', 'taxi', 'bar', 'airport']
