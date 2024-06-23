@@ -4,8 +4,8 @@
 			"path": "."
 		},
 		{
-			"name": "Project_GoiT",
-			"path": "../Project_GoiT/Project_GoiT"
+			"name": "goit-cs-hw-01",
+			"path": "../../goit-cs-hw-01"
 		}
 	],
 	"settings": {}
