@@ -1,21 +1,22 @@
+class LexicalError(Exception):
+    pass
+
+class ParsingError(Exception):
+    pass
+
 class TokenType:
     INTEGER = 'INTEGER'
     PLUS = 'PLUS'
     MINUS = 'MINUS'
-    EOF = 'EOF'  # Означає кінець вхідного файлу/рядка
+    EOF = 'EOF'  # Означає кінець вхідного рядка
 
 class Token:
     def __init__(self, type, value):
         self.type = type
         self.value = value
 
-
     def __str__(self):
         return f'Token({self.type}, {repr(self.value)})'
-
-
-class LexicalError(Exception):
-    pass
 
 class Lexer:
     def __init__(self, text):
@@ -27,7 +28,7 @@ class Lexer:
         """ Переміщуємо 'вказівник' на наступний символ вхідного рядка """
         self.pos += 1
         if self.pos > len(self.text) - 1:
-            self.current_char = None # Означає кінець введення
+            self.current_char = None  # Означає кінець введення
         else:
             self.current_char = self.text[self.pos]
 
@@ -67,7 +68,6 @@ class Lexer:
 
         return Token(TokenType.EOF, None)
 
-#Створення парсера
 class AST:
     pass
 
@@ -82,9 +82,6 @@ class Num(AST):
         self.token = token
         self.value = token.value
 
-class ParsingError(Exception):
-    pass
-
 class Parser:
     def __init__(self, lexer):
         self.lexer = lexer
@@ -96,7 +93,7 @@ class Parser:
     def eat(self, token_type):
         """
         Порівнюємо поточний токен з очікуваним токеном і, якщо вони збігаються,
-        'поглинаємо' його й переходимо до наступного токена.
+        'поглинаємо' його і переходимо до наступного токена.
         """
         if self.current_token.type == token_type:
             self.current_token = self.lexer.get_next_token()
@@ -138,7 +135,30 @@ def print_ast(node, level=0):
     else:
         print(f"{indent}Unknown node type: {type(node)}")
 
+class Interpreter:
+    def __init__(self, parser):
+        self.parser = parser
 
+    def visit_BinOp(self, node):
+        if node.op.type == TokenType.PLUS:
+            return self.visit(node.left) + self.visit(node.right)
+        elif node.op.type == TokenType.MINUS:
+            return self.visit(node.left) - self.visit(node.right)
+
+    def visit_Num(self, node):
+        return node.value
+
+    def interpret(self):
+        tree = self.parser.expr()
+        return self.visit(tree)
+
+    def visit(self, node):
+        method_name = 'visit_' + type(node).__name__
+        visitor = getattr(self, method_name, self.generic_visit)
+        return visitor(node)
+
+    def generic_visit(self, node):
+        raise Exception(f'Немає методу visit_{type(node).__name__}')
 
 
 def main():
@@ -157,6 +177,11 @@ def main():
             parser = Parser(lexer)
             tree = parser.expr()
             print_ast(tree)
+            lexer = Lexer(text)
+            parser = Parser(lexer)
+            interpreter = Interpreter(parser)
+            result = interpreter.interpret()
+            print(result)
         except Exception as e:
             print(e)
 
