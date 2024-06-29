@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "goit-cs-hw-01",
+			"path": "../../goit-cs-hw-01"
+		}
+	],
+	"settings": {}
+}
