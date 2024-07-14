@@ -1,11 +1,19 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": ".."
 		},
 		{
-			"name": "goit-cs-hw-01",
-			"path": "../../goit-cs-hw-01"
+			"name": "goit-cs-hw-02",
+			"path": "goit-cs-hw-02"
+		},
+		{
+			"name": "goit-cs-hw-03",
+			"path": "goit-cs-hw-03"
+		},
+		{
+			"name": "goit-cs-hw-04",
+			"path": "goit-cs-hw-04"
 		}
 	],
 	"settings": {}
