@@ -63,8 +63,11 @@ not admire it. The only excuse for making a useless thing is that one admires it
 All art is quite useless.
 """
 
+character_count=len(plaintext)
+print("кількість символів у тексті становить -", character_count, " символів")
+
 ciphertext = vigenere_encrypt(plaintext, key)
-print("Зашифрований текст:", ciphertext[:400])
+print("Зашифрований текст:", ciphertext[:200]) # для зручності обмежуємо кількість виведення шифрованого тексту
 
 decrypted_text = vigenere_decrypt(ciphertext, key)
-print("Розшифрований текст:", decrypted_text[:400])
+print("Розшифрований текст:", decrypted_text[:100]) # для зручності обмежуємо кількість виведення розшифрованого тексту

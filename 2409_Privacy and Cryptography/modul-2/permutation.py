@@ -1,20 +1,20 @@
 def generate_permutation_key(phrase):
     """
-    Генерує порядок перестановки на основі ключової фрази.
+    Функція для генерування порядку перестановки на основі ключової фрази.
     """
     sorted_phrase = sorted(list(phrase))
     return [sorted_phrase.index(char) for char in phrase]
 
 def encrypt(text, key):
     """
-    Шифрує текст за допомогою алгоритму перестановки.
+    Функція шифрування тексту з використанням алгоритму перестановки.
     """
-    # Розбиваємо текст на рядки відповідно до довжини ключа
+    # Розбивання тексту на рядки відповідно до довжини ключа
     rows = [text[i:i + len(key)] for i in range(0, len(text), len(key))]
-    # Заповнюємо останній рядок пробілами, якщо необхідно
+    # Заповнення останнього рядка пробілами (за необхідності)
     rows[-1] = rows[-1].ljust(len(key))
     
-    # Шифруємо, перемішуючи стовпчики за ключем
+    # Шифрування, перемішуючи стовпчики за ключем
     encrypted = ''
     for index in sorted(range(len(key)), key=lambda x: key[x]):
         encrypted += ''.join(row[index] for row in rows)
@@ -22,17 +22,17 @@ def encrypt(text, key):
 
 def decrypt(text, key):
     """
-    Дешифрує текст за допомогою алгоритму перестановки.
+    Функція дешифрування тексту з використанням алгоритму перестановки.
     """
     num_rows = len(text) // len(key)
-    # Розбиваємо текст на стовпці
+    # Розбивання тексту на стовпці
     columns = [text[i * num_rows:(i + 1) * num_rows] for i in range(len(key))]
-    # Повертаємо порядок колонок до оригінального
+    # Повернення порядку колонок до оригінального
     reordered_columns = [''] * len(key)
     for i, col_index in enumerate(sorted(range(len(key)), key=lambda x: key[x])):
         reordered_columns[col_index] = columns[i]
     
-    # Дешифруємо, з'єднуючи стовпці
+    # Дешифрування та з'єднання стовпчиків
     decrypted = ''.join(''.join(row) for row in zip(*reordered_columns)).rstrip()
     return decrypted
 
@@ -68,10 +68,13 @@ not admire it. The only excuse for making a useless thing is that one admires it
 All art is quite useless.
 """
 
+character_count=len(plaintext)
+print("кількість символів у тексті становить -", character_count, " символів")
+
 # Шифрування
 encrypted_text = encrypt(plaintext, key)
-print("Зашифрований текст:", encrypted_text[:400])
+print("Зашифрований текст:", encrypted_text[:200]) # для зручності обмежуємо кількість виведення шифрованого тексту
 
 # Дешифрування
 decrypted_text = decrypt(encrypted_text, key)
-print("Розшифрований текст:", decrypted_text[:400])
+print("Розшифрований текст:", decrypted_text[:200]) # для зручності обмежуємо кількість виведення розшифрованого тексту

@@ -2,7 +2,7 @@ import math
 
 def create_table(key, text, fill_char='X'):
     """
-    Створює таблицю на основі ключа та тексту.
+    Функція яка створює таблицю на основі ключа та тексту.
     """
     # Визначення кількості колонок за довжиною ключа
     columns = len(key)
@@ -14,13 +14,13 @@ def create_table(key, text, fill_char='X'):
 
 def sort_key(key):
     """
-    Сортує ключ і повертає індекси для перестановки.
+    Функція яка сортує ключ і повертає індекси для перестановки.
     """
     return sorted(range(len(key)), key=lambda k: key[k])
 
 def encrypt(text, key_phrase):
     """
-    Шифрує текст за допомогою табличного шифру.
+    Функція шифрування тексту за допомогою табличного шифру.
     """
     # Генеруємо таблицю
     key = sort_key(key_phrase)
@@ -31,7 +31,7 @@ def encrypt(text, key_phrase):
 
 def decrypt(encrypted_text, key_phrase):
     """
-    Дешифрує текст за допомогою табличного шифру.
+    Функція дешифрування тексту за допомогою табличного шифру.
     """
     # Генеруємо таблицю
     key = sort_key(key_phrase)
@@ -78,10 +78,13 @@ not admire it. The only excuse for making a useless thing is that one admires it
 All art is quite useless.
 """
 
+character_count=len(plaintext)
+print("кількість символів у тексті становить -", character_count, " символів")
+
 # Шифрування
 encrypted_text = encrypt(plaintext, key_phrase)
-print("Зашифрований текст:", encrypted_text[:400])
+print("Зашифрований текст:", encrypted_text[:200]) # для зручності обмежуємо кількість виведення шифрованого тексту
 
 # Дешифрування
 decrypted_text = decrypt(encrypted_text, key_phrase)
-print("Розшифрований текст:", decrypted_text[:400])
+print("Розшифрований текст:", decrypted_text[:200]) # для зручності обмежуємо кількість виведення розшифрованого тексту
