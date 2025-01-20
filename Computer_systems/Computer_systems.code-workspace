@@ -26,6 +26,18 @@
 		{
 			"name": "goit-pnc-hw-02",
 			"path": "../../Repositories/goit-pnc-hw-02"
+		},
+		{
+			"name": "goit-algo2-hw-01",
+			"path": "../../Repositories/goit-algo2-hw-01"
+		},
+		{
+			"name": "goit-algo2-hw-02",
+			"path": "../../Repositories/goit-algo2-hw-02"
+		},
+		{
+			"name": "goit-algo2-hw-03",
+			"path": "../../Repositories/goit-algo2-hw-03"
 		}
 	],
 	"settings": {}
